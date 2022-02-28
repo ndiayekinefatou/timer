@@ -1,71 +1,44 @@
-/*
-import 'dart:async';
+// import 'package:flutter/material.dart';
+// import 'home.dart';
+// import 'package:contacts_service/contacts_service.dart';
+// import 'package:avatar_glow/avatar_glow.dart';
+// import 'package:chrono_project2/Recorder.dart';
+// import 'package:chrono_project2/timer_widget.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
+// class Result extends StatefulWidget {
+//   const Result(Widget buildPlayer, {Key? key}) : super(key: key);
 
-class Results extends StatefulWidget {
-  const Results({Key ? key}) : super(key: key);
+//   @override
+//   _ResultState createState() => _ResultState();
+// }
 
-  @override
-  _ResultsState createState() => _ResultsState();
-}
+// class _ResultState extends State<Result> {
+//   @override
+//   bool visibleResult = true;
+//   List<Contact> contacts = [];
 
-class _ResultsState extends State<Results> {
+//   getOneContact() async {
+//     //Ici c'est la recherche du contact dont le nom est Ada. Ce dont j'ai besoin pour afficher
+//     // le résultat
+//     List<Contact> contacts = await ContactsService.getContacts(query: 'Ada');
+//   }
 
+//   Widget build(BuildContext context) => Center(child: searchContact());
 
-  void configLoading() {
-    EasyLoading.instance
-      ..displayDuration = const Duration(milliseconds: 2000)
-      ..indicatorType = EasyLoadingIndicatorType.fadingCircle
-      ..loadingStyle = EasyLoadingStyle.dark
-      ..indicatorSize = 45.0
-      ..radius = 10.0
-      ..progressColor = Colors.yellow
-      ..backgroundColor = Colors.green
-      ..indicatorColor = Colors.yellow
-      ..textColor = Colors.yellow
-      ..maskColor = Colors.blue.withOpacity(0.5)
-      ..userInteractions = true
-      ..dismissOnTap = false;
-  }
-  Timer ? _timer;
-  late double _progress;
-
-  @override
-  void initState() {
-    super.initState();
-    EasyLoading.addStatusCallback((status) {
-      print('EasyLoading Status $status');
-      if (status == EasyLoadingStatus.dismiss) {
-        _timer?.cancel();
-      }
-    });
-    EasyLoading.showSuccess('Use in initState');
-    // EasyLoading.removeCallbacks();
-
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          appBar: AppBar(
-            title:Text("Gestion Contact"),
-            backgroundColor: Colors.indigo,
-    ),
-          body: Center(
-            child: ElevatedButton(
-              child:Text("Hello"),
-              onPressed: (){
-                Navigator.pop(context);
-              },
-            ),
-          ),
-    ),
-
-    );
-  }
-}
-*/
+//   Widget searchContact() {
+//     return ListView.builder(
+//         shrinkWrap: true,
+//         padding: const EdgeInsets.all(8),
+//         itemCount: contacts.length,
+//         itemBuilder: (BuildContext context, int index) {
+//           Contact contact = contacts[index];
+//           return ListTile(
+//             leading: CircleAvatar(
+//               child: Text(contact.initials()),
+//             ),
+//             title: Text('${contact.displayName}'),
+//             subtitle: Text('${contact.phones?.elementAt(0).value}'),
+//           );
+//         });
+//   }
+// }

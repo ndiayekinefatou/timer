@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title:Text("Gestion Contact"),
+          title: Text("Contact management"),
           backgroundColor: Colors.indigo,
         ),
         body: Home(),

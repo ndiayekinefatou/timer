@@ -64,7 +64,8 @@ class _Timer_widgetState extends State<Timer_widget> {
     final seconds = twoDigits(duration.inSeconds.remainder(60));
     return Text(
       '$minutes:$seconds',
-      style: TextStyle(fontSize: 80),
+      style: TextStyle(fontSize: 12),
+      //style: TextStyle(fontSize: 80)
     );
   }
 }
